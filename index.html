@@ -21,10 +21,11 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         main {
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 1000px;
+            margin: 30px auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
@@ -35,21 +36,24 @@
         }
         .review {
             border-bottom: 1px solid #ddd;
-            padding: 15px 0;
+            padding: 20px 0;
             display: flex;
             align-items: flex-start;
+            transition: transform 0.2s;
         }
-        .review:last-child {
-            border-bottom: none;
+        .review:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
         }
         .review img {
-            max-width: 150px;
-            border-radius: 8px;
+            max-width: 200px;
+            border-radius: 10px;
             margin-right: 20px;
+            transition: transform 0.3s;
+            cursor: pointer;
         }
-        .review h3 {
-            color: #0077cc;
-            margin: 0;
+        .review img:hover {
+            transform: scale(1.1);
         }
         .review-details {
             flex: 1;
@@ -74,6 +78,48 @@
             background-color: #333;
             color: #fff;
             margin-top: 20px;
+            box-shadow: 0px -2px 8px rgba(0,0,0,0.2);
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ddd;
+        }
+        /* Форма обратной связи */
+        .contact-form {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        }
+        .contact-form h2 {
+            color: #0077cc;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #0077cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #005fa3;
         }
     </style>
 </head>
@@ -87,9 +133,10 @@
 <main>
     <!-- Обзор 1 -->
     <div class="review">
-        <img src="https://via.placeholder.com/150" alt="Смартфон 1">
+        <img src="https://via.placeholder.com/200" alt="Смартфон 1">
         <div class="review-details">
-            <h2>Смартфон 1 - Идеален для фото и видео</h2>
+
+<h2>Смартфон 1 - Идеален для фото и видео</h2>
             <p>Этот смартфон отлично подойдет для тех, кто ищет высокое качество фото и плавный опыт работы. Камера и мощный процессор позволяют создавать профессиональные снимки и видео.</p>
             <ul>
                 <li><strong>Камера:</strong> 108 МП</li>
@@ -101,41 +148,26 @@
         </div>
     </div>
 
-    <!-- Обзор 2 -->
-    <div class="review">
-        <img src="https://via.placeholder.com/150" alt="Смартфон 2">
-        <div class="review-details">
-            <h2>Смартфон 2 - Идеальный выбор для геймеров</h2>
-            <p>Модель с мощным процессором и экраном высокой частоты обновления, что делает ее идеальной для мобильных игр и мультимедиа.</p>
-            <ul>
-                <li><strong>Камера:</strong> 50 МП</li>
-                <li><strong>Процессор:</strong> MediaTek Dimensity 9000</li>
-                <li><strong>Батарея:</strong> 4500 мАч</li>
-                <li><strong>Дисплей:</strong> 6.5" Full HD</li>
-            </ul>
-            <a href="https://www.example.com/product-link" class="buy-button">Купить на AliExpress</a>
-        </div>
-    </div>
+    <!-- Добавь дополнительные обзоры, как в примере выше -->
 
-<!-- Обзор 3 -->
-    <div class="review">
-        <img src="https://via.placeholder.com/150" alt="Смартфон 3">
-        <div class="review-details">
-            <h2>Смартфон 3 - Бюджетный и производительный</h2>
-            <p>Хороший выбор для тех, кто хочет получить достойные характеристики по доступной цене. Подходит для повседневного использования и простых задач.</p>
-            <ul>
-                <li><strong>Камера:</strong> 48 МП</li>
-                <li><strong>Процессор:</strong> Snapdragon 680</li>
-                <li><strong>Батарея:</strong> 4000 мАч</li>
-                <li><strong>Дисплей:</strong> 6.3" LCD</li>
-            </ul>
-            <a href="https://www.example.com/product-link" class="buy-button">Купить на Ozon</a>
-        </div>
+    <!-- Форма обратной связи -->
+    <div class="contact-form">
+        <h2>Свяжитесь с нами</h2>
+        <p>Мы будем рады вашим отзывам и предложениям!</p>
+        <input type="text" placeholder="Ваше имя">
+        <input type="email" placeholder="Ваш email">
+        <textarea placeholder="Ваше сообщение"></textarea>
+        <button>Отправить</button>
     </div>
 </main>
 
 <footer>
     <p>&copy; 2023 Обзоры и Рекомендации Смартфонов. Все права защищены.</p>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
 </footer>
 
 </body>
